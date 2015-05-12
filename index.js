@@ -19,7 +19,7 @@ app.get("/", function (req, res) {
 
 app.post("/urls", function (req, res) {
   var newUrl = req.body.url;
-  // should check newUrl starts 
+  // should check newUrl starts
   //  with `https` or `http before
   //  pushing into urls array
   urls.push(newUrl);
