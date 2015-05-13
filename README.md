@@ -329,7 +329,7 @@ Because using an array index doesn't obscure how we are looking up the submitted
    localhost:3000/urls/99
 ```
 
-* Use `npm` to install `secure-random`
+* Use `npm` to install `randomstring`:
 	* `npm install --save randomstring`
 	*  In the node repl verify the following behavior.
 	
