@@ -116,7 +116,7 @@ Feeling stuck?  Each hint below should help you get one step closer to completin
 * Make sure you check that each submited url starts with either `https://` or `http://`.
 * To read form data, try using the Node package `body-parser` [(docs here)](https://github.com/expressjs/body-parser). **After** you require `body-parser` in your code, set it up with the following line:
 	```
-	app.use(bodyParser.urlencoded({extended: true}) // <-- add this
+	app.use(bodyParser.urlencoded({extended: true})) // <-- add this
 	```
 
 ![Spoiler Warning!](http://www.thefutonalliance.com/wp-content/uploads/2013/11/spoiler-warning.jpg)
@@ -254,7 +254,7 @@ If we submit the form from above, we will be making a `POST /urls` request, and 
 	var bodyParser = require("body-parser"); // <-- add this
 
 	var app = express();
-	app.use(bodyParser.urlencoded({extended: true}) // <-- add this
+	app.use(bodyParser.urlencoded({extended: true})) // <-- add this
 
 	// a variable that represents "./views"
 	var views = path.join(process.cwd(), "views"); 
@@ -284,7 +284,7 @@ If we submit the form from above, we will be making a `POST /urls` request, and 
 	var bodyParser = require("body-parser"); 
 
 	var app = express();
-	app.use(bodyParser.urlencoded({extended: true});
+	app.use(bodyParser.urlencoded({extended: true}));
 
 	// a variable that represents "./views"
 	var views = path.join(process.cwd(), "views"); 
