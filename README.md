@@ -300,7 +300,7 @@ If we submit the form from above, we will be making a `POST /urls` request, and 
 		var newUrl = req.body.url;
 		urls.push(newUrl);
 		var index = urls.length - 1;
-		res.send("View your url at localhost:3000/urls/" + index));
+		res.send("View your url at localhost:3000/urls/" + index);
 	});
 
 	```
