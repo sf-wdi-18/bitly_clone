@@ -266,7 +266,7 @@ If we submit the form from above, we will be making a `POST /urls` request, and 
 
 	```javascript
 	app.post("/urls", function (req, res) {
-		var newUrl = req.body.newUrl;
+		var newUrl = req.body.url;
 		res.send("Received " + newUrl);
 	});
 	```
@@ -292,12 +292,12 @@ If we submit the form from above, we will be making a `POST /urls` request, and 
 	var urls = [];// <--- Add this variable for urls
 	```
 
-* Now update your `app.post` to push the `newUrl` from the form into the `urls` array.
+* Now update your `app.post` to push the `url` input from the form into the `urls` array.
 
 	```javascript
 
 	app.post("/urls", function (req, res) {
-		var newUrl = req.body.newUrl;
+		var newUrl = req.body.url;
 		urls.push(newUrl);
 		var index = urls.length - 1;
 		res.send("View your url at localhost:3000/urls/" + index));
