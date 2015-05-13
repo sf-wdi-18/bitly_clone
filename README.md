@@ -44,7 +44,8 @@ You'll need the following routes:
 * `POST /urls` to submit a url to shorten
 * `GET /urls/:id` to be redirected to a url
 
-* When your **Express** server receives a url from the client, you should push it into an array.
+* When your **Express** server receives a url from the client, you should check that it starts with `http://` or `https://`.
+* If the url passes your validation (starts with `http://` or `https://`, push it into an array.
 * When your **Express** server responds, it should use the index of the url from the `urls` array as the `id`. For example, if I submit the first url, I should get back the following:
 	
 	```
@@ -113,7 +114,7 @@ Feeling stuck?  Each hint below should help you get one step closer to completin
 #### Hint 0: General hints   
 
 * If you use `nodemon index.js` to start your sever, changes will be automatically updated.  Otherwise, each time you change your server code, you'll have to stop the server (CTRL-C) and restart it (`node index.js`).
-* Make sure you check that each submited url starts with either `https://` or `http://`.
+* Make sure you check *in your code* that each submited url starts with either `https://` or `http://`.
 * To read form data, try using the Node package `body-parser` [(docs here)](https://github.com/expressjs/body-parser). **After** you require `body-parser` in your code, set it up with the following line:
 	```
 	app.use(bodyParser.urlencoded({extended: true})) // <-- add this
