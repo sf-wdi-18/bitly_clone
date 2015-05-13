@@ -45,7 +45,7 @@ You'll need the following routes:
 * `GET /urls/:id` to be redirected to a url
 
 * When your **Express** server receives a url from the client, you should check that it starts with `http://` or `https://`.
-* If the url passes your validation (starts with `http://` or `https://`, push it into an array.
+* If the url passes your validation (starts with `http://` or `https://`), push it into an array.
 * When your **Express** server responds, it should use the index of the url from the `urls` array as the `id`. For example, if I submit the first url, I should get back the following:
 	
 	```
